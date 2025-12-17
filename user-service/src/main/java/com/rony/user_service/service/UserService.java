@@ -30,6 +30,33 @@ public class UserService {
        return toDto(saved);
 
     }
+
+    public UserDto getUserById(Long id) {
+        return userRepository.findById(id)
+                .map(this::toDto)
+                .orElse(null);
+    }
+
+    public void updateUser(Long id, UserDto dto) {
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("User not found"));
+
+        user.setName(dto.getName());
+        user.setSurname(dto.getSurname());
+        user.setEmail(dto.getEmail());
+        user.setAddress(dto.getAddress());
+        user.setAlerting(dto.isAlerting());
+        user.setEnergyAlertingThreshold(dto.getEnergyAlertingThreshold());
+
+        userRepository.save(user);
+    }
+
+    public void deleteUser(Long id) {
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("User not found"));
+        userRepository.delete(user);
+    }
+
     private UserDto toDto(User user) {
         return UserDto.builder()
                 .id(user.getId())
