@@ -1,3 +1,10 @@
+## 🏗️ System Architecture
+
+The Home Energy Tracker follows a scalable, event-driven microservices architecture
+designed for real-time ingestion, analytics, and AI-driven insights.
+
+<img width="1472" height="704" alt="home-energy-tracker-system-design" src="https://github.com/user-attachments/assets/c025931d-1a59-472d-8330-f10d220cb7d9" />
+
 # Getting Started
 
 ## How to start
