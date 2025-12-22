@@ -3,7 +3,8 @@
 The Home Energy Tracker follows a scalable, event-driven microservices architecture
 designed for real-time ingestion, analytics, and AI-driven insights.
 
-<img width="1472" height="704" alt="home-energy-tracker-system-design" src="https://github.com/user-attachments/assets/c025931d-1a59-472d-8330-f10d220cb7d9" />
+<img width="1354" height="811" alt="Screenshot 2025-12-22 194629" src="https://github.com/user-attachments/assets/57894fd6-bdc1-493e-87b5-f6b32468c138" />
+
 
 # Getting Started
 
