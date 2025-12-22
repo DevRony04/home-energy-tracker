@@ -29,7 +29,7 @@ This project demonstrates **scalable backend system design**, asynchronous data 
 - Kafka acts as the event backbone
 - Downstream services process usage, alerts, and insights independently
 
-![Screenshot 2025-12-22 194629](https://github.com/user-attachments/assets/8cdfd2f2-6101-4b10-b146-86824be3ec02)
+<img width="1354" height="811" alt="Screenshot 2025-12-22 194629" src="https://github.com/user-attachments/assets/9ffa3705-e258-454f-8b6e-63f358b4ea7a" />
 
 
 > 📌 Refer to the architecture diagram above for detailed flow.
