@@ -22,20 +22,47 @@ This project demonstrates **scalable backend system design**, asynchronous data 
 
 ## 🏗️ System Architecture
 
-**Architecture Style:** Event-Driven Microservices (HLD)
+**Architecture Style:** Event-Driven Microservices
 
-- Clients and IoT devices interact via an API Gateway
-- High-frequency energy readings are ingested asynchronously
-- Kafka acts as the event backbone
-- Downstream services process usage, alerts, and insights independently
-
-<img width="1354" height="811" alt="Screenshot 2025-12-22 194629" src="https://github.com/user-attachments/assets/9ffa3705-e258-454f-8b6e-63f358b4ea7a" />
-
-
-
-> 📌 Refer to the architecture diagram above for detailed flow.
+This system is documented using **both High-Level Design (HLD)** and  
+**Low-Level Design (LLD)** to clearly separate *conceptual architecture* from *actual implementation*.
 
 ---
+
+### 🔷 High-Level Architecture (HLD – Conceptual View)
+
+This diagram represents the **overall event-driven design** and communication flow.
+
+- Shows **synchronous (REST)** vs **asynchronous (Kafka)** interactions
+- Highlights **Kafka as the central event backbone**
+- Explains how ingestion, usage, alerts, and insights are loosely coupled
+
+<img width="1354" height="811" alt="home-energy-tracker-HLD-design" src="https://github.com/user-attachments/assets/54976081-9fbb-4262-9533-21468ca44a8d" />
+
+
+**Legend**
+- ➝ Solid arrows → Synchronous REST calls  
+- ➝ Dashed arrows → Asynchronous Kafka events  
+
+---
+
+### 🔷 Low-Level Architecture (LLD – Implementation View)
+
+This diagram represents the **actual production-oriented implementation**.
+
+- API Gateway routing
+- Individual Spring Boot microservices
+- Kafka producers & consumers
+- Databases (MySQL, Time-Series DB)
+- AI & Alert services
+- Deployment-ready system view
+
+<img width="1472" height="704" alt="home-energy-tracker-LLD-design" src="https://github.com/user-attachments/assets/6393a079-1b49-4f86-a04c-613bc5a318cc" />
+
+
+> 📌 HLD explains *how the system works logically*,  
+> while LLD shows *how the system is actually built and deployed*.
+
 
 ## 🧱 Core Services
 
