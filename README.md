@@ -148,7 +148,13 @@ This enables loose coupling, scalability, and fault tolerance.
 ```bash
 git clone https://github.com/<your-username>/home-energy-tracker.git
 cd home-energy-tracker
-docker-compose up
+docker compose -v up -d
+```
+
+## 🛑 Stop the system
+
+```bash
+docker compose down
 ```
 
 ## 📈 Scalability & Future Enhancements
