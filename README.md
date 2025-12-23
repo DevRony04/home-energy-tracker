@@ -57,7 +57,7 @@ This diagram represents the **actual production-oriented implementation**.
 - AI & Alert services
 - Deployment-ready system view
 
-<img width="1472" height="704" alt="home-energy-tracker-LLD-design" src="https://github.com/user-attachments/assets/6393a079-1b49-4f86-a04c-613bc5a318cc" />
+<img width="1536" height="1024" alt="home-energy-tracker-LLD-design 2" src="https://github.com/user-attachments/assets/8afab36b-f2f6-4dae-a45b-689470f0cc45" />
 
 
 > 📌 HLD explains *how the system works logically*,  
