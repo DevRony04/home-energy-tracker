@@ -5,13 +5,12 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: home-energy-tracker
+      MYSQL_DATABASE: home_energy_tracker
     ports:
       - "3307:3306"
     volumes:
-        - ./docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
-        - db-data:/var/lib/mysql
-        - db-data:/var/log/mysql
+      - ./docker/mysql:/docker-entrypoint-initdb.d
+      - db-data:/var/lib/mysql
 
   kafka:
     container_name: kafka
@@ -97,6 +96,22 @@ services:
       KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9092  # Use internal Docker network name
       DYNAMIC_CONFIG_ENABLED: 'true'
     restart: unless-stopped
+
+  influxdb:
+    image: influxdb:2.7
+    container_name: influxdb
+    ports:
+      - "8072:8086"
+    environment:
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=admin
+      - DOCKER_INFLUXDB_INIT_PASSWORD=admin123
+      - DOCKER_INFLUXDB_INIT_ORG=rony
+      - DOCKER_INFLUXDB_INIT_BUCKET=usage-bucket
+      - DOCKER_INFLUXDB_INIT_RETENTION=1w
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=my-token
+    volumes:
+      - ./influxdb_data:/var/lib/influxdb2
 
 volumes:
   db-data:
