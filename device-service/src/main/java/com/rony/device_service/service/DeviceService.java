@@ -7,6 +7,8 @@ import com.rony.device_service.repository.DeviceRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class DeviceService {
@@ -50,6 +52,12 @@ public class DeviceService {
             throw new DeviceNotFoundException("Device not found with id " + id);
         }
         deviceRepository.deleteById(id);
+    }
+    public List<DeviceDto> getAllDevicesByUserId(Long userId) {
+        List<Device> devices = deviceRepository.findAllByUserId(userId);
+        return devices.stream()
+                .map(this::mapToDto)
+                .toList();
     }
 
     private DeviceDto mapToDto(Device device) {
