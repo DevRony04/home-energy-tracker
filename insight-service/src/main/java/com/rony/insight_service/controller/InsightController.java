@@ -17,12 +17,13 @@ public class InsightController {
     private final InsightService insightService;
 
     @GetMapping("/saving-tips/{userId}")
-    public ResponseEntity<InsightDto> getSavingTips(@PathVariable Long userId){
-        final InsightDto insight = insightService.getSavingTips(userId);
+    public ResponseEntity<InsightDto> getSavingTips(@PathVariable Long userId) {
+        final InsightDto insight = insightService.getSavingsTips(userId);
         return ResponseEntity.ok(insight);
     }
+
     @GetMapping("/overview/{userId}")
-    public ResponseEntity<InsightDto> getOverview(@PathVariable Long userId){
+    public ResponseEntity<InsightDto> getOverview(@PathVariable Long userId) {
         final InsightDto insight = insightService.getOverview(userId);
         return ResponseEntity.ok(insight);
     }
