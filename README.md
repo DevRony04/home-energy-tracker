@@ -98,6 +98,27 @@ This diagram represents the **actual production-oriented implementation**.
 
 ---
 
+## 📑 API Documentation (Swagger / OpenAPI)
+
+Each microservice exposes **Swagger UI** for interactive API exploration and testing.  
+APIs are documented using **OpenAPI 3**, providing clear request/response contracts and validation details.
+
+### 🔍 Swagger UI Endpoints (Local)
+
+| Service | Port | Swagger URL |
+|-------|------|-------------|
+| API Gateway | 8080 | http://localhost:8080/swagger-ui/index.html |
+| Device Service | 8081 | http://localhost:8081/swagger-ui/index.html |
+| Ingestion Service | 8082 | http://localhost:8082/swagger-ui/index.html |
+| Usage Service | 8083 | http://localhost:8083/swagger-ui/index.html |
+| Alert Service | 8084 | http://localhost:8084/swagger-ui/index.html |
+| Insight Service | 8085 | http://localhost:8085/swagger-ui/index.html |
+
+> Swagger documentation reflects actual production APIs and improves developer onboarding and testing.
+
+---
+
+
 ## 🔄 Event Streaming (Kafka)
 
 A single Kafka cluster is used with multiple topics:
