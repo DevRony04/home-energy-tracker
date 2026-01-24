@@ -107,7 +107,7 @@ APIs are documented using **OpenAPI 3**, providing clear request/response contra
 
 | Service | Port | Swagger URL |
 |-------|------|-------------|
-| API Gateway | 8080 | http://localhost:8080/swagger-ui/index.html |
+| User Service (Entry Point) | 8080 | http://localhost:8080/swagger-ui/index.html |
 | Device Service | 8081 | http://localhost:8081/swagger-ui/index.html |
 | Ingestion Service | 8082 | http://localhost:8082/swagger-ui/index.html |
 | Usage Service | 8083 | http://localhost:8083/swagger-ui/index.html |
