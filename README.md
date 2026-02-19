@@ -7,7 +7,7 @@ This project demonstrates **scalable backend system design**, asynchronous data 
 
 ---
 
-## 🚀 Key 
+## 🚀 Key Features
 
 - 📡 Real-time IoT energy data ingestion
 - 🧩 Microservices-based architecture
