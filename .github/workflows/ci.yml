@@ -22,7 +22,6 @@ jobs:
 
       - name: Build All Services
         run: |
-          mvn -B clean install --file api-gateway/pom.xml
           mvn -B clean install --file user-service/pom.xml
           mvn -B clean install --file device-service/pom.xml
           mvn -B clean install --file ingestion-service/pom.xml
