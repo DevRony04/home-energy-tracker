@@ -81,7 +81,8 @@ AI-style summaries (Spring AI), routed through the gateway when enabled.
 
 *Electricity basics, assumptions, and what the system must support (sources, units, constraints).*
 
-![Background and system requirements](diagrams/background-and-requirements.png)  
+![Background and system requirements](<img width="5245" height="2804" alt="background-and-requirements" src="https://github.com/user-attachments/assets/ab1fdb68-c902-4072-9932-5525450cd158" />
+)  
 *Figure: Background and requirements for the Home Energy Tracker domain.*
 
 ---
@@ -91,7 +92,8 @@ AI-style summaries (Spring AI), routed through the gateway when enabled.
 *When downstream services fail or slow down, the gateway stops hammering them: the **circuit breaker** opens,
 short-circuits calls, and can return a controlled fallback—improving stability for the whole system.*
 
-![Circuit breaker pattern in the API Gateway](diagrams/circuit-breaker-in-api-gateway.png)  
+![Circuit breaker pattern in the API Gateway](<img width="1875" height="2064" alt="circuit-breaker-in-api-gateway" src="https://github.com/user-attachments/assets/4b0556db-fd14-4e79-bfc0-274c0443809c" />
+)  
 *Figure: Resilience and circuit breaker behavior at the edge (API Gateway).*
 
 ---
@@ -101,7 +103,8 @@ short-circuits calls, and can return a controlled fallback—improving stability
 *The **API Gateway** sits in a **public** or DMZ-style network segment while core services run in a more **private**
 zone. Clients never talk to every microservice directly; they use one controlled entry point.*
 
-![Network separation with API Gateway](diagrams/diagram-showing-gateway-in-public-network.png)  
+![Network separation with API Gateway](<img width="2486" height="1526" alt="diagram-showing-gateway-in-public-network" src="https://github.com/user-attachments/assets/1fb27dfd-e85e-46fe-9b78-ce838e9a4969" />
+)  
 *Figure: Public vs private network separation with the gateway as the controlled entry point.*
 
 ---
@@ -110,7 +113,8 @@ zone. Clients never talk to every microservice directly; they use one controlled
 
 *End-to-end path: ingestion, messaging, usage processing, storage, alerting, and supporting services.*
 
-![Full microservices flow with components](diagrams/full-microservices-flow-diagram-with-components.png)  
+![Full microservices flow with components](<img width="3321" height="2287" alt="full-microservices-flow-diagram-with-components" src="https://github.com/user-attachments/assets/2cc75039-4aba-4ef2-805d-7038a4041875" />
+)  
 *Figure: Full system walkthrough across components and data paths.*
 
 ---
@@ -120,7 +124,8 @@ zone. Clients never talk to every microservice directly; they use one controlled
 *Services expose **Prometheus**-compatible metrics via Actuator. **Prometheus** scrapes and stores series; **Grafana**
 visualizes SLO-friendly dashboards (latency, errors, JVM, circuit breaker health).*
 
-![Observability with Prometheus and Grafana](diagrams/observability-with-prometheus-and-grafana.png)  
+![Observability with Prometheus and Grafana](<img width="2711" height="1059" alt="observability-with-prometheus-and-grafana" src="https://github.com/user-attachments/assets/d4cf13a2-88b2-4cef-9e4d-c482579c9bd5" />
+)  
 *Figure: Monitoring and observability stack (metrics flow and tooling).*
 
 ---
