@@ -1,12 +1,14 @@
 HELP.md
 
-### Build Artifacts ###
+### Build Artifacts
+
 target/
 build/
 out/
 !mvn/wrapper/maven-wrapper.jar
 
-### STS ###
+### STS
+
 .apt_generated
 .classpath
 .factorypath
@@ -15,31 +17,59 @@ out/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
+### IntelliJ IDEA
+
 .idea/
 *.iws
 *.iml
 *.ipr
 
-### NetBeans ###
+### NetBeans
+
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
 
-### VS Code ###
+### VS Code
+
 .vscode/
 
-### OS & Miscellaneous ###
+### OS & Miscellaneous
+
 .DS_Store
 Thumbs.db
 logs/
 *.log
 
-### Compiled Java Files ###
+### Compiled Java Files
+
 *.class
 
-### Maven & Gradle ###
+### Maven & Gradle
+
 .mvn/
 .gradle/
+
+### Docker / Runtime Volumes
+
+volume-data/
+docker/kafka_data/
+influxdb_data/
+
+### Runtime / DB Files
+
+*.sock
+*.pid
+*.err
+*.cnf
+
+### Environment Files
+
+.env
+.env.*
+
+### Docker Overrides
+
+docker-compose.override.yml
