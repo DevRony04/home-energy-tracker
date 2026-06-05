@@ -5,7 +5,6 @@ import org.springframework.cloud.gateway.server.mvc.handler.GatewayRouterFunctio
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.servlet.function.HandlerFilterFunction;
 import org.springframework.web.servlet.function.RequestPredicates;
 import org.springframework.web.servlet.function.RouterFunction;
 import org.springframework.web.servlet.function.ServerResponse;
